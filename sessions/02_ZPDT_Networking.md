@@ -15,9 +15,9 @@ The TCPIP tunnel is a ZPDT construct to allow you to access z/OS locally.
 
 ## level 1 - Home LAN Networking
 
-![network_l1](/images/network_l1.JPG)
+![network_l1](/sessions/images/network_l1.JPG)
 
 ## Level 2 - Remote Access
 
 
-![network_l2](/images/network_l2.JPG)
+![network_l2](/sessions/images/network_l2.JPG)
