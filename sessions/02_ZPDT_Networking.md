@@ -10,14 +10,14 @@ When you install ZPDT under linux, you can run a 3270 emulator on the same linux
 
 The TCPIP tunnel is a ZPDT construct to allow you to access z/OS locally.
 
-
+![network_l0](/images/network_l0.JPG)
 
 
 ## level 1 - Home LAN Networking
 
-
+![network_l1](/images/network_l1.JPG)
 
 ## Level 2 - Remote Access
 
 
-
+![network_l2](/images/network_l2.JPG)
