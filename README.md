@@ -4,12 +4,19 @@ ZPDT Education Curriculum for ANZ z Stack Team
 This is a repository of ZPDT and z/OS skills sessions for the IBM ANZ zStack Team.
 
 [01_ZPDT_System_Spec](https://github.com/zeditor01/zpdteduk/blob/main/sessions/01_ZPDT_System_Spec.md)
+
 [02_ZPDT_Networking](https://github.com/zeditor01/zpdteduk/blob/main/sessions/02_ZPDT_Networking.md)
+
 [03_Install_CentOS_Stream_Linux](https://github.com/zeditor01/zpdteduk/blob/main/sessions/03_Install_CentOS_Stream_Linux.md)
+
 [04_Install_ZPDT_Driver](https://github.com/zeditor01/zpdteduk/blob/main/sessions/04_Install_ZPDT_Driver.md)
+
 [05_Install_ADCD_ZOS](https://github.com/zeditor01/zpdteduk/blob/main/sessions/05_Install_ADCD_ZOS.md)
+
 [06_IPL_and_Logon](https://github.com/zeditor01/zpdteduk/blob/main/sessions/06_IPL_and_Logon.md)
+
 [07_ISPF_PDF](https://github.com/zeditor01/zpdteduk/blob/main/sessions/07_ISPF_PDF.md)
+
 [08_ZOS_Datasets](https://github.com/zeditor01/zpdteduk/blob/main/sessions/08_ZOS_Datasets.md)
 [09_JES2](https://github.com/zeditor01/zpdteduk/blob/main/sessions/09_JES2.md)
 [10_interfaces](https://github.com/zeditor01/zpdteduk/blob/main/sessions/10_interfaces.md)
