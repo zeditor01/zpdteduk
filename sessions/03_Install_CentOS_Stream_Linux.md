@@ -2,13 +2,21 @@
 
 1. Choose CentOS Stream 9 (Neale's choice) or RHEL 9 (Ben's choice)
 2. Create Installable Media for Linux and run installation.
-3. Cystomise Linux to meet your needs.
+3. Customise Linux to meet your needs.
 
-# Beazt setup with 8 core ZPDT token
 
-## Status
-* Beazt deploy: complete
-* This docco page: complete
+## 1. CentOS Stream 9 code
+
+Download CentOS Stream 9 from [here](https://www.centos.org/)
+
+Click on the 'Download" Tab on the top of the page.
+
+Don't be tempted by CentOS Stream 10 just yet. It takes a while for many linux packages to get ported to each new version of centOS Stream. CentOS Stream 9 has everything you need to run ZPDT.
+
+Download the x86_64 ISO package from one of the mirrors.
+
+
+
 
 ## Pre-Requisite Software
 
