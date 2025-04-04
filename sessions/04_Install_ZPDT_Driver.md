@@ -130,6 +130,9 @@ Logon to linux, switch to the /usr/z1090/bin directory, and execute the request_
 
 Using the firefox browser in your Linux PC, logon the [IBM resourcelink](https://www.ibm.com/support/resourcelink/) with your IBM id.
 
+Choose lease extension, fill in the details, and upload your request file
+
+![lease](/sessions/images/lease.JPG)
 
 
 
