@@ -108,10 +108,40 @@ open a terminal as root, change directory to /usr/z1090/bin, and execute z1090in
 Oops - my system fails on one check, but it still works.
 
 
-3. Request a ZPDT License File
+## 3. Request a ZPDT License File
+
+this involves 4 steps
+1. generate a request file
+2. upload the request file to resourcelink
+3. download the granted license file
+4. install the granted license file
 
 
-4. Install the License File and Try IPLing
+### Step 1. generate a request file
+
+Logon to linux, switch to the /usr/z1090/bin directory, and execute the request_license command
+
+```
+[ibmsys1@RHEL ~]$ cd /usr/z1090/bin
+[ibmsys1@RHEL bin]$ sudo ./request_license
+```
+
+### Step 2. upload the request file to resourcelink
+
+Using the firefox browser in your Linux PC, logon the [IBM resourcelink](https://www.ibm.com/support/resourcelink/) with your IBM id.
+
+
+
+
+
+### Step 3. download the granted license file
+
+
+
+### step 4. install the granted license file
+
+
+## 4. Install the License File and Try IPLing
 
 
 
