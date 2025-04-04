@@ -31,6 +31,12 @@ Click on the Drivers link, and download the latest Linux 64bit driver
 
 ### Pre-Requisite Software
 
+You will need the x3270 package. the z/OS master console will be accessed using x3270. 
+
+Some other pre-requisites must also be installed.
+
+Open a linux terminal and install these packages. (you may need to prefix the commands with ```sudo``` to get root privilege.
+
 ```
 # yum install libstdc++.i686 
 # yum install libnsl
@@ -40,6 +46,10 @@ Click on the Drivers link, and download the latest Linux 64bit driver
 ```
 
 ### ZPDT User
+
+Next - we need to create the ibmsys1 userid, which will be the owner of the ZPDT instance.
+It needs to be in a group, and you need to set a password. the commands below will do the trick
+
 ```
 sudo groupadd -g 970 zpdt
 sudo useradd -u 1070 -g zpdt -m -d /home/ibmsys1 ibmsys1
@@ -48,8 +58,12 @@ usermod -aG wheel ibmsys1
 ```
 
 ### kernel settings
+
+ZPDT requires some kernal setting to be correct. Edit ```/etc/sysctl.conf``` using nano or some other editor, with the following values.
+
+Command: ```sudo nano /etc/sysctl.conf```
+
 ```
-# nano /etc/sysctl.conf (The following lines should begin in column 1.)
 kernel.core_pattern=core-%e-%p-%t
 kernel.core_uses_pid=1
 kernel.msgmax=65536
@@ -60,14 +74,22 @@ kernel.shmall=24000000
 kernel.sem=250 32000 250 1024
 net.core.rmem_max=1048576
 net.core.rmem_default=1048576
+```
 
+Then activate the new kernel settings
+```
 # /sbin/sysctl -p /etc/sysctl.conf
 ```
 
-### bashrc
-```
-nano /home/ibmsys1/.bashrc 
 
+### bashrc
+
+Next, edit the .bashrc file for the ibmsys1 user that owns ZPDT. set some path values.
+
+Command: ```sudo nano /home/ibmsys1/.bashrc```
+
+
+```
 export PATH=/usr/z1090/bin:$PATH
 export LD_LIBRARY_PATH=/usr/z1090/bin:$LD_LIBRARY_PATH
 export MANPATH=/usr/z1090/man:$MANPATH
@@ -77,15 +99,13 @@ ulimit -m unlimited (If more than 128 emulated I/O devices)
 ulimit -v unlimited (If more than 128 emulated I/O devices)
 ```
 
-### Further Edits
-```
-kernel.shmmax=36000000000
-kernel.shmall=24000000
-to allow larger memory to be exploited.
-Still only using 14GB real memory.
-awsstart wont let me run with Devmap memory over 36GB
-Needs further research
-```
+### Finally you can test whether the system meets the pre-requisites for ZPDT.
+
+open a terminal as root, change directory to /usr/z1090/bin, and execute z1090instcheck
+
+![z1090check](/sessions/images/z1090check.JPG)
+
+Oops - my system fails on one check, but it still works.
 
 
 3. Request a ZPDT License File
