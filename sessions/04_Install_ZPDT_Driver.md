@@ -7,6 +7,9 @@ logon the [IBM resourcelink](https://www.ibm.com/support/resourcelink/) with you
 Look down to wards the bottom of the page to find 1090 Support.
 
 
+![rl02](/sessions/images/rl02.JPG)
+
+
 
 # Beazt setup with 8 core ZPDT token
 
