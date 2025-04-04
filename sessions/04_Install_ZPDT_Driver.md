@@ -1,7 +1,14 @@
 # Install ZPDT Driver
 
+1. Download the ZPDT Driver
+2. Install the Linux Pre-Requisites for ZPDT
+3. Request a ZPDT License File
+4. Install the License File and Try IPLing
 
 
+## 1. Download the ZPDT Driver
+
+ 
 logon the [IBM resourcelink](https://www.ibm.com/support/resourcelink/) with your IBM id to access the ZPDT drivers.
 
 Look down to wards the bottom of the page to find 1090 Support.
@@ -15,18 +22,14 @@ It also contains links to license files that you have previously requested.
 ![rl03](/sessions/images/rl03.JPG)
 
 
-Click on the Drivers link, and download the latest driver 
+Click on the Drivers link, and download the latest Linux 64bit driver 
 
 ![rl04](/sessions/images/rl04.JPG)
 
+## 2. Install the Linux Pre-Requisites for ZPDT
 
-# Beazt setup with 8 core ZPDT token
 
-## Status
-* Beazt deploy: complete
-* This docco page: complete
-
-## Pre-Requisite Software
+### Pre-Requisite Software
 
 ```
 # yum install libstdc++.i686 
@@ -36,7 +39,7 @@ Click on the Drivers link, and download the latest driver
 # yum install x3270-x11 (Needed by x3270.)
 ```
 
-## ZPDT User
+### ZPDT User
 ```
 sudo groupadd -g 970 zpdt
 sudo useradd -u 1070 -g zpdt -m -d /home/ibmsys1 ibmsys1
@@ -44,7 +47,7 @@ passwd ibmsys1
 usermod -aG wheel ibmsys1
 ```
 
-## kernel settings
+### kernel settings
 ```
 # nano /etc/sysctl.conf (The following lines should begin in column 1.)
 kernel.core_pattern=core-%e-%p-%t
@@ -61,7 +64,7 @@ net.core.rmem_default=1048576
 # /sbin/sysctl -p /etc/sysctl.conf
 ```
 
-## bashrc
+### bashrc
 ```
 nano /home/ibmsys1/.bashrc 
 
@@ -74,7 +77,7 @@ ulimit -m unlimited (If more than 128 emulated I/O devices)
 ulimit -v unlimited (If more than 128 emulated I/O devices)
 ```
 
-## Further Edits
+### Further Edits
 ```
 kernel.shmmax=36000000000
 kernel.shmall=24000000
@@ -83,6 +86,14 @@ Still only using 14GB real memory.
 awsstart wont let me run with Devmap memory over 36GB
 Needs further research
 ```
+
+
+3. Request a ZPDT License File
+
+
+4. Install the License File and Try IPLing
+
+
 
 ## 8-core zPDT licenses in a token are usually valid for a year and must be renewed afterwards.
 
