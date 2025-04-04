@@ -1,6 +1,12 @@
 # Install ZPDT Driver
 
 
+
+logon the IBM Resourcelink with your IBM id to access the ZPDT drivers.
+
+[respurcelink](https://resourcelink.cis.ibm.net/support/resourcelink/)
+
+
 # Beazt setup with 8 core ZPDT token
 
 ## Status
