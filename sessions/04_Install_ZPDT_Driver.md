@@ -10,6 +10,8 @@
 
 There is a substantial redbook that describes installation and useage of ZPDT [here SG248205](https://www.redbooks.ibm.com/redbooks/pdfs/sg248205.pdf)
 
+The notes is this page are a condensed list of deployment steps. The document above is far more comprehensive.
+
 ## 1. Download the ZPDT Driver
 
  
