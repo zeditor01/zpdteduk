@@ -15,7 +15,7 @@ Don't be tempted by CentOS Stream 10 just yet. It takes a while for many linux p
 
 Download the x86_64 ISO package from one of the mirrors.
 
-
+![centos9](/sessions/images/centos9.JPG)
 
 
 ## Pre-Requisite Software
