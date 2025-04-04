@@ -6,6 +6,10 @@
 4. Try IPLing
 
 
+## Redbook
+
+There is a substantial redbook that describes installation and useage of ZPDT [here SG248205(https://www.redbooks.ibm.com/redbooks/pdfs/sg248205.pdf)
+
 ## 1. Download the ZPDT Driver
 
  
