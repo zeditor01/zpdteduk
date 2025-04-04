@@ -57,7 +57,9 @@ There base utilities are sepearate from the pre-requisites that ZPDT will need. 
 
 Your Linux NUC should run at a static IP address. this can be achieved by configuring Linux TCPIP to use a static address, or using address reservation on your router to allocate a particular TCPIP address for the box.
 
-I use address reservation.
+I use address reservation. Screenshot below : the bottom entry is my NUC (whch I call BEAZT).
+
+![router](/sessions/images/router.JPG)
 
 
 ### XRDP.
