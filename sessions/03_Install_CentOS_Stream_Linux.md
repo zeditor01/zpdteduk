@@ -53,7 +53,7 @@ Now that Linux is installed, you will want some basic linux packages to work wit
 There base utilities are sepearate from the pre-requisites that ZPDT will need. They are addressed in the next section.
 
 
-### Statis IP Address
+### Configure a Static IP Address
 
 Your Linux NUC should run at a static IP address. this can be achieved by configuring Linux TCPIP to use a static address, or using address reservation on your router to allocate a particular TCPIP address for the box.
 
@@ -62,7 +62,7 @@ I use address reservation. Screenshot below : the bottom entry is my NUC (whch I
 ![router](/sessions/images/router.JPG)
 
 
-### XRDP.
+### Install and configure XRDP
 
 I leave my NUC running 24*7 without a keyboard, mouse and screen. I use Windows Remote Desktop to connect into my NUC, in order to IPL and Shutdown zOS. Base Linux does not support Windows RDP, so you need to install and configure it.
 
@@ -99,6 +99,11 @@ All modern linux distros enable the SE Linux firewall by default. We need to ope
 sudo firewall-cmd --add-port=3389/tcp --permanent
 sudo firewall-cmd --reload
 ```
+
+At this point i would shutdown and restart linux, before attempting to open an RDP session to my NUC.
+
+
+
 
 ```
 # yum install libstdc++.i686 
