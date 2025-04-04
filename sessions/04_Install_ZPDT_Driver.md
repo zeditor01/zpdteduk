@@ -2,9 +2,10 @@
 
 
 
-logon the IBM Resourcelink with your IBM id to access the ZPDT drivers.
+logon the [IBM resourcelink](https://www.ibm.com/support/resourcelink/) with your IBM id to access the ZPDT drivers.
 
-[respurcelink](https://resourcelink.cis.ibm.net/support/resourcelink/)
+Look down to wards the bottom of the page to find 1090 Support.
+
 
 
 # Beazt setup with 8 core ZPDT token
