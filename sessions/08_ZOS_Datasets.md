@@ -16,7 +16,7 @@ Virtual Storage Access Method (VSAM)
 Generation Data Groups (GDGs)
 z/OS File System - Posix(ZFS)
 
-## 3.Go Deeper (Theory)
+## 3. Defining and Using Datasets (Theory)
 
 Sequential Datasets:
 * Characteristics: Linear access, fixed or variable record lengths.
