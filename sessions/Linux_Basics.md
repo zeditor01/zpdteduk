@@ -31,7 +31,7 @@ Step 2: Install XRDP. Install XRDP and its dependencies:
 sudo dnf install xrdp tigervnc-server -y
 ```
 
-Step 3: Enable the ZRDP Service, and ensure that it runs at boot.
+Step 3: Enable the XRDP Service, and ensure that it runs at boot.
 
 ```
 sudo systemctl enable xrdp --now
