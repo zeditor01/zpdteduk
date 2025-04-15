@@ -1,4 +1,4 @@
-Lesson 3 - z/OS Datasets introduction
+# Lesson 3 - z/OS Datasets introduction
 
 1. File System Basics - Linux and Windows reference points
 2. Characteristics, Properties, Definition (ISPF and JCL), Usage
@@ -17,5 +17,5 @@ Lesson 3 - z/OS Datasets introduction
    ACS Rules (Automatic Class Selection)
    Review, Edit, change and Activate SMS Rules   
 
-Homework:
+## Homework:
 Set of Tasks to allocate and work with different dataset types.
