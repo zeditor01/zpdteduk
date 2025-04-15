@@ -145,6 +145,10 @@ Ben to Write
 
 ## Future Subjects
 
+So many subjects to cover. The following is a starter list of topics to consider
+
+* RACF and Security Facilities
+* Certificates and TLS
 * z/OSMF
 * ZOWE
 * UMS
@@ -152,6 +156,6 @@ Ben to Write
 * Db2 Automation Expert
 * VSCODE and the Db2 z/OS Plug In
 * SQL Data Insights
-
-* 
+* Infosphere CDC
+* z/OS Container Extensions
 
