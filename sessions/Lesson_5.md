@@ -1,4 +1,4 @@
-Lesson 5 - Install a product from Shop Z ( zSecure )
+# Lesson 5 - Install a product from Shop Z ( zSecure )
 
 1. SMPE Basics
 1.1 SMPE CSI Datasets 
@@ -13,7 +13,7 @@ Lesson 5 - Install a product from Shop Z ( zSecure )
 6. Post-z/OSMF Customisation 
 7. Using the zSecure Product
 
-Homework: Quiz on the SMPE zone for zSecure, that will require you to use SMPE menuss
+## Homework: Quiz on the SMPE zone for zSecure, that will require you to use SMPE menuss
 
 
 
