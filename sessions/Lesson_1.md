@@ -377,7 +377,11 @@ device 0702 3279 3174 L702
 device 0703 3279 3174 L703           
 device 0704 3279 3174 L704           
 device 0705 3279 3174 L705           
-device 0706 3279 3174 L706           
+device 0706 3279 3174 L706
+device 0707 3279 3174 L707           
+device 0708 3279 3174 L708           
+device 0709 3279 3174 L709           
+device 0710 3279 3174 L710      
   
 [manager]
 name awsckd 28  
