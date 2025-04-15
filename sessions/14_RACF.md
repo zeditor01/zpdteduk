@@ -1,9 +1,0 @@
-# RACF
-
-RACF
-- USERS
-- GROUPS
-- OMVS
-- CERTIFICATES
-- KEYRINGS
-- zSecure
