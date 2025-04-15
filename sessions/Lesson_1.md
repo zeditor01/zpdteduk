@@ -541,7 +541,7 @@ For this message
 
 respond with ```R 00,I```
 
-Now watch the z/OS console messages scroll over the screen. Every time you watch these messages you will become more aware of what the IPL sequence is doing.
+Now watch the z/OS console messages scroll over the screen. Every time you watch these messages you will become more aware of what the IPL sequence is doing. The screenshot below catched the IPL sequence initialising the TCPIP stack and the OMVS envirnment.
 
 ![IPLSEQ02](/sessions/images/iplseq02.JPG)
 
