@@ -8,7 +8,14 @@ After logging on to CentOS Linux, you can open apps by clicking on the "Activiti
 
 ![activities](/sessions/images/activities.JPG)
 
-
+The most useful apps are 
+1. Firefox
+2. File Manager
+3. System Monoitor
+4. Terminal
+5. Disk settings
+6. x3270 emulatr.
+7. 
 ## Opening a remote desktop.
 For demos it's really handy to connect from your work laptop into the Linux and z/OS systems, so that you can share your screen via Teams. This needs you to install xrdp on linux, open the xrdp port in any firewalls, and open the Remote Desktop Connection app on your work laptop.
 
