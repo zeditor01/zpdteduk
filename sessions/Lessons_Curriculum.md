@@ -35,7 +35,7 @@ Practice IPL, TSO logon, TCPIP connectivity and Shutdown of z/OS
 
 
 
-## Lesson 2 - z/OS Architecture, Subsystems, Key Tools
+## [Lesson 2 - z/OS Architecture, Subsystems, Key Tools](https://github.com/zeditor01/zpdteduk/blob/main/sessions/Lesson_2.md)
 
 Guided Tour of z/OS major components
 1.1 z/OS Architecture 
@@ -54,7 +54,7 @@ Quiz that will require you to navigate your z/OS system to discover answers
 
 
 
-## Lesson 3 - z/OS Datasets introduction
+## [Lesson 3 - z/OS Datasets introduction](https://github.com/zeditor01/zpdteduk/blob/main/sessions/Lesson_3.md)
 
 1. File System Basics - Linux and Windows reference points
 2. Characteristics, Properties, Definition (ISPF and JCL), Usage
@@ -78,7 +78,7 @@ Set of Tasks to allocate and work with different dataset types.
 
 
 
-## Lesson 4 - Customize z/OS PARMLIB, PROCLIB, REXX, Dataset Commander etc...
+## [Lesson 4 - Customize z/OS PARMLIB, PROCLIB, REXX, Dataset Commander etc...](https://github.com/zeditor01/zpdteduk/blob/main/sessions/Lesson_4.md)
 
 1. IPL Parameters 
 2. z/OS startup Control (VTAMALL) 
@@ -92,7 +92,7 @@ Set of Tasks to allocate and work with different dataset types.
 
 
 
-## Lesson 5 - Install a product from Shop Z ( zSecure )
+## [Lesson 5 - Install a product from Shop Z ( zSecure )](https://github.com/zeditor01/zpdteduk/blob/main/sessions/Lesson_5.md)
 
 1. SMPE Basics
 1.1 SMPE CSI Datasets 
@@ -111,7 +111,7 @@ Set of Tasks to allocate and work with different dataset types.
 
 
 
-## Lesson 6 - Db2 z/OS 
+## [Lesson 6 - Db2 z/OS](https://github.com/zeditor01/zpdteduk/blob/main/sessions/Lesson_6.md) 
 
 Approach is learning by doing, rather than death by Powerpoint.
 1. DB2 Panels navigation in z/OS 
@@ -131,11 +131,11 @@ Approach is learning by doing, rather than death by Powerpoint.
 
 Ben to write
 
-## Lesson 7 - CICS and EGUI application
+## [Lesson 7 - CICS and EGUI application](https://github.com/zeditor01/zpdteduk/blob/main/sessions/Lesson_7.md)
 
 ### Homework -Ben to Write 
 
-## Lesson 8 - GENAPP ( deploy a CICS-DB2 application ).
+## [Lesson 8 - GENAPP ( deploy a CICS-DB2 application )](https://github.com/zeditor01/zpdteduk/blob/main/sessions/Lesson_8.md)
 
 Ben to Write 
 
