@@ -569,7 +569,10 @@ Type in  ```l tso```
 ![ispf03](/sessions/images/ispf03.JPG)
 
 
-![ispf03](/sessions/images/ispf03.JPG)
+![logon10](/sessions/images/logon10)
+
+
+![logon11](/sessions/images/logon11)
 
 
 
