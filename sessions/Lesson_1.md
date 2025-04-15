@@ -25,15 +25,14 @@ This section is structured as follows
 
 ### 1.1.1 Documentation
 
-ISV IBM zPDT Guide and Reference (SG24-8205) can be downloaded from [here SG248205](https://www.redbooks.ibm.com/redbooks/pdfs/sg248205.pdf). This document is the definitive guide for setting up ZPDT.
+ISV IBM zPDT Guide and Reference (SG24-8205) can be downloaded from [here SG248205](https://www.redbooks.ibm.com/redbooks/pdfs/sg248205.pdf). This document is the definitive guide for setting up ZPDT. 
 
 
-## 1. Download the ZPDT Driver
+## 1.1.2 Download the ZPDT Driver
 
- 
-logon the [IBM resourcelink](https://www.ibm.com/support/resourcelink/) with your IBM id to access the ZPDT drivers.
+The IBM Resourcelink website is where you download the ZPDT Driver [IBM resourcelink](https://www.ibm.com/support/resourcelink/).
 
-Look down to wards the bottom of the page to find 1090 Support.
+Look down towards the bottom of the page to find 1090 Support.
 
 ![rl02](/sessions/images/rl02.JPG)
 
