@@ -143,3 +143,15 @@ Ben to Write
 
 
 
+## Future Subjects
+
+* z/OSMF
+* ZOWE
+* UMS
+* Db2 Admin Foundation
+* Db2 Automation Expert
+* VSCODE and the Db2 z/OS Plug In
+* SQL Data Insights
+
+* 
+
