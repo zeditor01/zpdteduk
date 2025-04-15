@@ -19,7 +19,7 @@ Following the first 8 lessons, we should review how well the format has worked, 
 * Lesson 8 - GENAPP ( deploy a CICS-DB2 application ).
 
 
-## Lesson 1 - Build your ADCD z/OS image, IPL, configure TCPIP, Shutdown
+## [Lesson 1 - Build your ADCD z/OS image, IPL, configure TCPIP, Shutdown](https://github.com/zeditor01/zpdteduk/blob/main/sessions/Lesson_1.md)
 
 1.1 Install the ZPDT application on Linux x86 
 1.2 Download and Unpack the ADCD volumes
