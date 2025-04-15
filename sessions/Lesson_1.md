@@ -553,7 +553,11 @@ Keep an eye on the Linux system monitor. Depending how much CPU and memory your 
 
 ## 1.5 Navigate ISPF/PDF Menus
 
-To be added
+Eventually, the second x3270 emulator will present the VTAM logon screen.
+
+![ispf01](/sessions/images/ispf01.JPG)
+
+
 
 ## 1.6 Edit TCPIP stack in z/OS 
 
