@@ -1,3 +1,8 @@
-Lesson 8 - GENAPP ( deploy a CICS-DB2 application ).
+# Lesson 8 - GENAPP ( deploy a CICS-DB2 application ).
 
-ben to Write 
+Ben to Write 
+
+
+## Homework
+
+Ben to write
