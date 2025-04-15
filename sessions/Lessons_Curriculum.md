@@ -1,6 +1,14 @@
-ZPDT Initial Curriculum
+# ZPDT Initial Curriculum
 
-Phase 1 : Lessons 1-8
+This page outlines the initial outline of ZPDT practical lessons. the intention is to avoid "death by powerpoint" and focus on learning by doing on our ZPDT systems.
+
+We will maintain a schedule of a weekly hour-long recorded session at 3pm on Fridays. It is likely that these lessons will flow beyond a single hour, and we will conntinue incomplete lessons in the next scheduled session.
+
+Following the first 8 lessons, we should review how well the format has worked, and consider next steps in learning z/OS.
+
+
+
+## Phase 1 : Lessons 1-8
 * Lesson 1 - Build your ADCD z/OS image, IPL, configure TCPIP, Shutdown
 * Lesson 2 - z/OS Architecture, Subsystems, Key Tools
 * Lesson 3 - z/OS Datasets introduction
