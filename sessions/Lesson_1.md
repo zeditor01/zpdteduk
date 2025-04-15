@@ -339,13 +339,15 @@ gunzip -c /home/neale/Downloads/c3zcx1.gz > /home/ibmsys1/zpdteduk/c3zcx1
 gunzip -c /home/neale/Downloads/c3zwe1.gz > /home/ibmsys1/zpdteduk/c3zwe1
 ```
 
-The Resvols need to be unpacked using a special ZPDT program after the license key has been installed.
+The Resvols need to be unpacked using a special ZPDT program after the license key has been installed. The process goes like this.
 
-The process goes like this.
+```
+/usr/z1090/bin/Z1090_ADCD_install /home/ibmsys1/c3res1.zPDT /home/ibmsys1/zpdteduk/c3res1 
+```
 
 ## 1.3 Edit Device Map and IPL Script
 
-Edit a device map file
+Edit a device map file (z31c_devmap). The example below may need to be edited to suit your system. 
 
 ```
 #ADCD z/OS 3.1 December 2023 basic definition: TCPIP QDIO definition 
@@ -379,40 +381,38 @@ device 0706 3279 3174 L706
   
 [manager]
 name awsckd 28  
-device 0a80 3390 3990 /home/ibmsys1/zpdt2025/a3res1
-device 0a81 3390 3990 /home/ibmsys1/zpdt2025/a3res2
-device 0a82 3390 3990 /home/ibmsys1/zpdt2025/a3sys1
-device 0a83 3390 3990 /home/ibmsys1/zpdt2025/a3cfg1
-device 0a84 3390 3990 /home/ibmsys1/zpdt2025/a3uss1
-device 0a85 3390 3990 /home/ibmsys1/zpdt2025/a3uss2
-device 0a96 3390 3990 /home/ibmsys1/zpdt2025/a3uss3
-device 0a86 3390 3990 /home/ibmsys1/zpdt2025/a3paga
-device 0a87 3390 3990 /home/ibmsys1/zpdt2025/a3pagb
-device 0a88 3390 3990 /home/ibmsys1/zpdt2025/a3pagc
-device 0a89 3390 3990 /home/ibmsys1/zpdt2025/a3prd1
-device 0a8a 3390 3990 /home/ibmsys1/zpdt2025/a3prd2
-device 0a8b 3390 3990 /home/ibmsys1/zpdt2025/a3prd3
-device 0a8c 3390 3990 /home/ibmsys1/zpdt2025/a3dis1
-device 0a8d 3390 3990 /home/ibmsys1/zpdt2025/a3dis2
-device 0a8e 3390 3990 /home/ibmsys1/zpdt2025/a3dis3
-device 0a8f 3390 3990 /home/ibmsys1/zpdt2025/a3inm1
-device 0a90 3390 3990 /home/ibmsys1/zpdt2025/a3c560
-device 0a9a 3390 3990 /home/ibmsys1/zpdt2025/a3c610
-device 0a92 3390 3990 /home/ibmsys1/zpdt2025/a3dbc1
-device 0a93 3390 3990 /home/ibmsys1/zpdt2025/a3dbc2
-device 0a97 3390 3990 /home/ibmsys1/zpdt2025/a3dbd1
-device 0a98 3390 3990 /home/ibmsys1/zpdt2025/a3dbd2
-device 0a94 3390 3990 /home/ibmsys1/zpdt2025/a3kan1 
-device 0a9b 3390 3990 /home/ibmsys1/zpdt2025/a3usr1
-device 0a9c 3390 3990 /home/ibmsys1/zpdt2025/a3w901
-device 0aad 3390 3990 /home/ibmsys1/zpdt2025/a3w902
-device 0a9e 3390 3990 /home/ibmsys1/zpdt2025/a3blz1
-device 0a9f 3390 3990 /home/ibmsys1/zpdt2025/a3imf1
-device 0aa1 3390 3990 /home/ibmsys1/zpdt2025/a3prd4
-device 0a9d 3390 3990 /home/ibmsys1/zpdt2025/a3prd5
-device 0aa2 3390 3990 /home/ibmsys1/zpdt2025/a3zcx1
-device 0aa3 3390 3990 /home/ibmsys1/zpdt2025/a3dbar # a3DBAR should be on 0AA3, to match with IODF
-device 0aae 3390 3990 /home/ibmsys1/zpdt2025/a3zwe1
+device 0a80 3390 3990 /home/ibmsys1/zpdt2025/c3res1
+device 0a81 3390 3990 /home/ibmsys1/zpdt2025/c3res2
+device 0a82 3390 3990 /home/ibmsys1/zpdt2025/c3sys1
+device 0a83 3390 3990 /home/ibmsys1/zpdt2025/c3cfg1
+device 0a84 3390 3990 /home/ibmsys1/zpdt2025/c3uss1
+device 0a85 3390 3990 /home/ibmsys1/zpdt2025/c3uss2
+device 0a96 3390 3990 /home/ibmsys1/zpdt2025/c3uss3
+device 0a86 3390 3990 /home/ibmsys1/zpdt2025/c3paga
+device 0a87 3390 3990 /home/ibmsys1/zpdt2025/c3pagb
+device 0a88 3390 3990 /home/ibmsys1/zpdt2025/c3pagc
+device 0a89 3390 3990 /home/ibmsys1/zpdt2025/c3prd1
+device 0a8a 3390 3990 /home/ibmsys1/zpdt2025/c3prd2
+device 0a8b 3390 3990 /home/ibmsys1/zpdt2025/c3prd3
+device 0a8c 3390 3990 /home/ibmsys1/zpdt2025/c3dis1
+device 0a8d 3390 3990 /home/ibmsys1/zpdt2025/c3dis2
+device 0a8e 3390 3990 /home/ibmsys1/zpdt2025/c3dis3
+device 0a8f 3390 3990 /home/ibmsys1/zpdt2025/c3inm1
+device 0a90 3390 3990 /home/ibmsys1/zpdt2025/c3c560
+device 0a9a 3390 3990 /home/ibmsys1/zpdt2025/c3c610
+device 0a97 3390 3990 /home/ibmsys1/zpdt2025/c3dbd1
+device 0a98 3390 3990 /home/ibmsys1/zpdt2025/c3dbd2
+device 0a94 3390 3990 /home/ibmsys1/zpdt2025/c3kan1 
+device 0a9b 3390 3990 /home/ibmsys1/zpdt2025/c3usr1
+device 0a9c 3390 3990 /home/ibmsys1/zpdt2025/c3w901
+device 0aad 3390 3990 /home/ibmsys1/zpdt2025/c3w902
+device 0a9e 3390 3990 /home/ibmsys1/zpdt2025/c3blz1
+device 0a9f 3390 3990 /home/ibmsys1/zpdt2025/c3imf1
+device 0aa1 3390 3990 /home/ibmsys1/zpdt2025/c3prd4
+device 0a9d 3390 3990 /home/ibmsys1/zpdt2025/c3prd5
+device 0aa2 3390 3990 /home/ibmsys1/zpdt2025/c3zcx1
+device 0aa3 3390 3990 /home/ibmsys1/zpdt2025/c3dbar # a3DBAR should be on 0AA3, to match with IODF
+device 0aae 3390 3990 /home/ibmsys1/zpdt2025/c3zwe1
 device 0ab1 3390 3990 /home/ibmsys1/zpdt2025/sares1
 
 [manager]
@@ -431,18 +431,28 @@ device 406 osa osa
 
 ## 1.4 First IPL 
 
+Execute the following command
+
+```
+awsstart --map z31c_devmap
+
+```
 
 ## 1.5 Navigate ISPF/PDF Menus
 
+To be added
 
 ## 1.6 Edit TCPIP stack in z/OS 
 
+To be added
 
 ## 1.7 Test TCPIP connectivity 
 
+To be added
 
 ## 1.8 Shutdown z/OS 
 
+To be added
 
 ## Homework:
 Practice IPL, TSO logon, TCPIP connectivity and Shutdown of z/OS 
