@@ -123,7 +123,7 @@ Oops - my system fails on one check, but it still works.
 
 OK - so you downloaded the ZPDT drive, and it's sitting in your Downloads directory.
 
-
+![Downloads](/sessions/images/Downloads.JPG)
 
 ### 1.1.5 Request the ZPDT License
 
