@@ -546,10 +546,13 @@ Now watch the z/OS console messages scroll over the screen. Every time you watch
 ![IPLSEQ02](/sessions/images/iplseq02.JPG)
 
 
-Keep an eye on the Linux system monitor. Depending how much CPU and memory your system has, it might take a long time to complete the IPL. An IBM-provided laptop will be doing well to IPL in an hour. Wait until the CPU cores are all quiet, and also wait until you see the console message that "z/OSMF is ready to run a smarter planet". These are good indications that the IPL is complete. Don't worry that the ipl takes an hour or so, because after IPL the performance should be quite good, even if it took a while to get there.
+Keep an eye on the Linux system monitor. Depending how much CPU and memory your system has, it might take a long time to complete the IPL. An IBM-provided laptop will be doing well to IPL in an hour. 
 
 ![IPLSEQ03](/sessions/images/iplseq03.JPG)
 
+Wait until the CPU cores are all quiet, and also wait until you see the console message that "z/OSMF is ready to run a smarter planet". These are good indications that the IPL is complete. Don't worry that the ipl takes an hour or so, because after IPL the performance should be quite good, even if it took a while to get there.
+
+![IPLSEQ04](/sessions/images/iplseq04.JPG)
 
 ## 1.5 Navigate ISPF/PDF Menus
 
@@ -559,6 +562,14 @@ Eventually, the second x3270 emulator will present the VTAM logon screen.
 
 
 Type in  ```l tso```
+
+![ispf02](/sessions/images/ispf02.JPG)
+
+
+![ispf03](/sessions/images/ispf03.JPG)
+
+
+![ispf03](/sessions/images/ispf03.JPG)
 
 
 
