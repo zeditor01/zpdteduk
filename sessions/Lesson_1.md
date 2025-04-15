@@ -385,10 +385,10 @@ Make sure that the volumes are all read/write
 chmod 777 c3*
 ```
 
-The Resvols need to be unpacked using a special ZPDT program after the license key has been installed. The process goes like this.
+The Resvols need to be unpacked using a special ZPDT program after the license key has been installed. 
 
 ```
-/usr/z1090/bin/Z1090_ADCD_install /home/ibmsys1/c3res1.zPDT /home/ibmsys1/zpdteduk/c3res1 
+/usr/z1090/bin/Z1090_ADCD_install /home/ibmsys1/zpdteduk/c3res1.zPDT
 ```
 
 ## 1.3 Edit Device Map and IPL Script
