@@ -19,7 +19,7 @@ Following the first 8 lessons, we should review how well the format has worked, 
 * Lesson 8 - GENAPP ( deploy a CICS-DB2 application ).
 
 
-Lesson 1 - Build your ADCD z/OS image, IPL, configure TCPIP, Shutdown
+## Lesson 1 - Build your ADCD z/OS image, IPL, configure TCPIP, Shutdown
 
 1.1 Install the ZPDT application on Linux x86 
 1.2 Download and Unpack the ADCD volumes
@@ -30,12 +30,12 @@ Lesson 1 - Build your ADCD z/OS image, IPL, configure TCPIP, Shutdown
 1.7 Test TCPIP connectivity 
 1.8 Shutdown z/OS 
 
-Homework:
+### Homework:
 Practice IPL, TSO logon, TCPIP connectivity and Shutdown of z/OS 
 
 
 
-Lesson 2 - z/OS Architecture, Subsystems, Key Tools
+## Lesson 2 - z/OS Architecture, Subsystems, Key Tools
 
 Guided Tour of z/OS major components
 1.1 z/OS Architecture 
@@ -49,12 +49,12 @@ Guided Tour of z/OS major components
 1.9 Unix System Services (USS)
 1.10 Overview of IMS, CICS, DB2, MQ, WAS
 
-Homework: 
+### Homework: 
 Quiz that will require you to navigate your z/OS system to discover answers
 
 
 
-Lesson 3 - z/OS Datasets introduction
+## Lesson 3 - z/OS Datasets introduction
 
 1. File System Basics - Linux and Windows reference points
 2. Characteristics, Properties, Definition (ISPF and JCL), Usage
@@ -73,12 +73,12 @@ Lesson 3 - z/OS Datasets introduction
    ACS Rules (Automatic Class Selection)
    Review, Edit, change and Activate SMS Rules   
 
-Homework:
+### Homework:
 Set of Tasks to allocate and work with different dataset types.
 
 
 
-Lesson 4 - Customize z/OS PARMLIB, PROCLIB, REXX, Dataset Commander etc...
+## Lesson 4 - Customize z/OS PARMLIB, PROCLIB, REXX, Dataset Commander etc...
 
 1. IPL Parameters 
 2. z/OS startup Control (VTAMALL) 
@@ -88,11 +88,11 @@ Lesson 4 - Customize z/OS PARMLIB, PROCLIB, REXX, Dataset Commander etc...
 6. ZFS dataset allocation for SMPE installs
 ... REXX, Dataset Commander etc...
 
-Homework: TBD
+### Homework: TBD
 
 
 
-Lesson 5 - Install a product from Shop Z ( zSecure )
+## Lesson 5 - Install a product from Shop Z ( zSecure )
 
 1. SMPE Basics
 1.1 SMPE CSI Datasets 
@@ -107,11 +107,11 @@ Lesson 5 - Install a product from Shop Z ( zSecure )
 6. Post-z/OSMF Customisation 
 7. Using the zSecure Product
 
-Homework: Quiz on the SMPE zone for zSecure, that will require you to use SMPE menuss
+### Homework: Quiz on the SMPE zone for zSecure, that will require you to use SMPE menuss
 
 
 
-Lesson 6 - Db2 z/OS 
+## Lesson 6 - Db2 z/OS 
 
 Approach is learning by doing, rather than death by Powerpoint.
 1. DB2 Panels navigation in z/OS 
@@ -127,18 +127,19 @@ Approach is learning by doing, rather than death by Powerpoint.
 11. Configure DRDA Connectivity and ODBC, JDBC clients 
 12. Develop and Test DB2 REST Services
 
-Homework: Quiz that will require Db2 to be used in order to determine the answers.
+### Homework: Quiz that will require Db2 to be used in order to determine the answers.
 
+Ben to write
 
-Lesson 7 - CICS and EGUI application
+## Lesson 7 - CICS and EGUI application
+
+### Homework -Ben to Write 
+
+## Lesson 8 - GENAPP ( deploy a CICS-DB2 application ).
 
 Ben to Write 
 
-Lesson 8 - GENAPP ( deploy a CICS-DB2 application ).
-
-ben to Write 
-
-
+### Homework -Ben to Write 
 
 
 
