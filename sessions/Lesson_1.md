@@ -558,6 +558,9 @@ Eventually, the second x3270 emulator will present the VTAM logon screen.
 ![ispf01](/sessions/images/ispf01.JPG)
 
 
+Type in  ```l tso```
+
+
 
 ## 1.6 Edit TCPIP stack in z/OS 
 
