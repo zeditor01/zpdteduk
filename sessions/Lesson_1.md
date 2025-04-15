@@ -36,16 +36,14 @@ Look down towards the bottom of the page to find <b>1090 Support.</b>
 
 ![rl02](/sessions/images/rl02.JPG)
 
-The 1090 Support Page allows you to request the 1090 drivers ( which is what you need to install on your NUC ).
-
-It also contains links to license files that you have previously requested.
+The 1090 Support Page allows you to request the 1090 drivers ( which is what you need to install on your NUC ). It also contains links to license files that you have previously requested.
 
 ![rl03](/sessions/images/rl03.JPG)
-
 
 Click on the Drivers link, and download the latest Linux 64bit driver 
 
 ![rl04](/sessions/images/rl04.JPG)
+
 
 ## 2. Install the Linux Pre-Requisites for ZPDT
 
