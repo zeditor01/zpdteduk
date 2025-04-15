@@ -54,9 +54,9 @@ sudo firewall-cmd --reload
 
 At this point i would shutdown and restart linux, before attempting to open an RDP session to my NUC.
 
-Once Linux is booted, from my Windows client I open the "Remote Desktop" application and connect to 192.168.1.170 
-
-If you run a Mac - Mac app store has a free RDP app from Microsoft.
+Once Linux is booted, 
+* from my Windows client I open the "Remote Desktop" application and connect to 192.168.1.170 
+* If you run a Mac - Mac app store has a free RDP app from Microsoft.
 
 ![rdp01](/sessions/images/rdp01.JPG)
 
