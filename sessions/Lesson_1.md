@@ -33,17 +33,20 @@ ISV IBM zPDT Guide and Reference (SG24-8205) can be downloaded from [here SG2482
 The IBM Resourcelink website is where you download the ZPDT Driver [IBM resourcelink](https://www.ibm.com/support/resourcelink/). Look down towards the bottom of the page to find <b>1090 Support.</b>
 
 
- <img src="/sessions/images/rl02.JPG" alt="rl02" width="70%" align="center">
-
+ <img src="/sessions/images/rl02.JPG" alt="rl02" width="70%">
 
 
 The 1090 Support Page allows you to request the 1090 drivers ( which is what you need to install on your NUC ). It also contains links to license files that you have previously requested.
 
-![rl03](/sessions/images/rl03.JPG)
+ <img src="/sessions/images/rl03.JPG" alt="rl03" width="70%">
+ 
+
 
 Click on the Drivers link, and download the latest Linux 64bit driver 
 
-![rl04](/sessions/images/rl04.JPG)
+ <img src="/sessions/images/rl04.JPG" alt="rl04" width="70%">
+ 
+
 
 
 ### 1.1.3 Install the Linux Pre-Requisites for ZPDT
