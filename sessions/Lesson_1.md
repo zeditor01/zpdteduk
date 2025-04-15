@@ -558,6 +558,20 @@ Wait until the CPU cores are all quiet, and also wait until you see the console 
 
 Eventually, the second x3270 emulator will present the VTAM logon screen.
 
+
+![logon01](/sessions/images/logon01.png)
+
+
+![logon02](/sessions/images/logon02.png)
+
+
+![logon03](/sessions/images/logon03.png)
+
+
+![logon04](/sessions/images/logon04.png)
+
+ddd
+
 ![ispf01](/sessions/images/ispf01.JPG)
 
 
