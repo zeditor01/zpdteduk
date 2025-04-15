@@ -121,9 +121,20 @@ Oops - my system fails on one check, but it still works.
 
 ### 1.1.4 Install the ZPDT Driver
 
-OK - so you downloaded the ZPDT drive, and it's sitting in your Downloads directory.
+OK - so you downloaded the ZPDT driver (z1090-1-12.59.17.x86_64), and it's sitting in your Downloads directory. the screenshot below also includes all the ADCD zOS volume images.
+
+If the ZPDT driver (z1090-1-12.59.17.x86_64) isn't executable, make it executable by issuing the command ```chmod 777 z1090-1-12.59.17.x86_64```.
 
 ![Downloads](/sessions/images/Downloads.JPG)
+
+Now, su to root, and run the installer
+```
+su -
+
+cd /home/neale/Downloads
+
+./z1090-1-12.59.17.x86_64
+```
 
 ### 1.1.5 Request the ZPDT License
 
