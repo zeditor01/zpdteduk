@@ -25,9 +25,8 @@ This section is structured as follows
 
 ### 1.1.1 Documentation
 
-There is a substantial redbook that describes installation and useage of ZPDT [here SG248205](https://www.redbooks.ibm.com/redbooks/pdfs/sg248205.pdf)
+ISV IBM zPDT Guide and Reference (SG24-8205) can be downloaded from [here SG248205](https://www.redbooks.ibm.com/redbooks/pdfs/sg248205.pdf). This document is the definitive guide for setting up ZPDT.
 
-The notes is this page are a condensed list of deployment steps. The document above is far more comprehensive.
 
 ## 1. Download the ZPDT Driver
 
