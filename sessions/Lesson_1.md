@@ -34,7 +34,12 @@ The IBM Resourcelink website is where you download the ZPDT Driver [IBM resource
 
 Look down towards the bottom of the page to find <b>1090 Support.</b>
 
-![rl02](/sessions/images/rl02.JPG)
+
+ 
+
+
+
+![rl02](/sessions/images/rl02.JPG){width="50%"}
 
 The 1090 Support Page allows you to request the 1090 drivers ( which is what you need to install on your NUC ). It also contains links to license files that you have previously requested.
 
