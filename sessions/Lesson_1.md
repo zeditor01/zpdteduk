@@ -546,6 +546,10 @@ Now watch the z/OS console messages scroll over the screen. Every time you watch
 ![IPLSEQ02](/sessions/images/iplseq02.JPG)
 
 
+Keep an eye on the Linux system monitor. Depending how much CPU and memory your system has, it might take a long time to complete the IPL. An IBM-provided laptop will be doing well to IPL in an hour. Wait until the CPU cores are all quiet, and also wait until you see the console message that "z/OSMF is ready to run a smarter planet". These are good indications that the IPL is complete. Don't worry that the ipl takes an hour or so, because after IPL the performance should be quite good, even if it took a while to get there.
+
+![IPLSEQ03](/sessions/images/iplseq03.JPG)
+
 
 ## 1.5 Navigate ISPF/PDF Menus
 
