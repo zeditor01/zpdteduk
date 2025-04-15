@@ -66,5 +66,81 @@ then I can access my Linux Desktop from Windows client, to perform IPLs and shut
 
 
 
+## Linux Permissions
+
+User ibmsys1 is the zpdt owner. The directories where the z/OS volumes are deployed, and the files within them should all have owner "ibmsys1" and group "zpdt".
+
+Looking at the directories under the /home/ibmsys1 folder we find that the owner and group are root, because I created them as root.
+```
+[root@localhost ibmsys1]# ls -al
+
+...
+drwxrwxr-x.  2 ibmsys1 neale 4096 Feb  1 14:14 zpdt2025
+drwxr-xr-x.  2 root    root  4096 Apr 15 19:34 zpdteduk
+
+```
+
+Execute the following commands as root
+```
+chgrp zpdt zpdteduk
+chown ibmsys1 zpdteduk
+```
+
+to see the following listing
+```
+drwxrwxr-x.  2 ibmsys1 neale 4096 Feb  1 14:14 zpdt2025
+drwxr-xr-x.  2 ibmsys1 zpdt  4096 Apr 15 19:34 zpdteduk
+```
+
+Now, within /home/ibmsys1/zpdteduk do the same for the volumes.
+
+Execute the following commands as root
+```
+chgrp zpdt *
+chown ibmsys1 *
+```
+ to see the following
+ ```
+[root@localhost zpdteduk]# ls -al
+total 295998240
+drwxr-xr-x.  2 ibmsys1 zpdt        4096 Apr 15 19:39 .
+drwxrwxrwx. 15 ibmsys1 zpdt        4096 Apr 15 18:47 ..
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:28 c3blz1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:22 c3c610
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:23 c3c620
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:24 c3cfg1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:22 c3dbar
+-rwxrwxrwx.  1 ibmsys1 zpdt 15344640512 Apr 15 19:21 c3dbd1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:21 c3dbd2
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:19 c3dis1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:20 c3dis2
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:20 c3dis3
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:23 c3imf1
+-rwxrwxrwx.  1 ibmsys1 zpdt 17049600512 Apr 15 19:29 c3inm1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:28 c3kan1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:16 c3paga
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:16 c3pagb
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:16 c3pagc
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:17 c3prd1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:17 c3prd2
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:18 c3prd3
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:18 c3prd4
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:19 c3prd5
+-rw-r--r--.  1 ibmsys1 zpdt  8539292672 Apr 15 19:39 c3res1
+-rwxrwxrwx.  1 ibmsys1 zpdt   918356776 Apr 15 19:34 c3res1.zPDT
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:23 c3res2
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:26 c3sys1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:24 c3usr1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:25 c3uss1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:25 c3uss2
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:26 c3uss3
+-rwxrwxrwx.  1 ibmsys1 zpdt 15344640512 Apr 15 19:27 c3w901
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:27 c3w902
+-rwxrwxrwx.  1 ibmsys1 zpdt 15344640512 Apr 15 19:30 c3zcx1
+-rwxrwxrwx.  1 ibmsys1 zpdt  8539292672 Apr 15 19:31 c3zwe1
+-rwxrwxrwx.  1 ibmsys1 zpdt          27 Apr 15 18:58 go.sh
+-rwxrwxrwx.  1 ibmsys1 zpdt        2295 Apr 15 18:49 unpack.sh
+-rw-r--r--.  1 ibmsys1 zpdt        3030 Apr 15 18:58 z31c_devmap
+ ```
 
 
