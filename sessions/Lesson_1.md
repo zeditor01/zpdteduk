@@ -33,7 +33,7 @@ ISV IBM zPDT Guide and Reference (SG24-8205) can be downloaded from [here SG2482
 The IBM Resourcelink website is where you download the ZPDT Driver [IBM resourcelink](https://www.ibm.com/support/resourcelink/). Look down towards the bottom of the page to find <b>1090 Support.</b>
 
 
- <img src="/sessions/images/rl02.JPG" alt="rl02" width="70%" align=center>
+ <img src="/sessions/images/rl02.JPG" alt="rl02" width="70%" align="center">
 
 
 
