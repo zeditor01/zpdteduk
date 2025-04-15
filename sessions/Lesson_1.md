@@ -28,7 +28,7 @@ This section is structured as follows
 ISV IBM zPDT Guide and Reference (SG24-8205) can be downloaded from [here SG248205](https://www.redbooks.ibm.com/redbooks/pdfs/sg248205.pdf). This document is the definitive guide for setting up ZPDT. 
 
 
-## 1.1.2 Download the ZPDT Driver
+### 1.1.2 Download the ZPDT Driver
 
 The IBM Resourcelink website is where you download the ZPDT Driver [IBM resourcelink](https://www.ibm.com/support/resourcelink/).
 
@@ -45,14 +45,9 @@ Click on the Drivers link, and download the latest Linux 64bit driver
 ![rl04](/sessions/images/rl04.JPG)
 
 
-## 2. Install the Linux Pre-Requisites for ZPDT
+### 1.1.3 Install the Linux Pre-Requisites for ZPDT
 
-
-### Pre-Requisite Software
-
-You will need the x3270 package. the z/OS master console will be accessed using x3270. 
-
-Some other pre-requisites must also be installed.
+You will need the x3270 package. the z/OS master console will be accessed using x3270. Some other pre-requisites must also be installed.
 
 Open a linux terminal and install these packages. (you may need to prefix the commands with ```sudo``` to get root privilege.
 
@@ -64,7 +59,7 @@ Open a linux terminal and install these packages. (you may need to prefix the co
 # yum install x3270-x11 (Needed by x3270.)
 ```
 
-### ZPDT User
+Create the ZPDT User (ibmsys1) and set a password
 
 Next - we need to create the ibmsys1 userid, which will be the owner of the ZPDT instance.
 It needs to be in a group, and you need to set a password. the commands below will do the trick
@@ -76,7 +71,7 @@ passwd ibmsys1
 usermod -aG wheel ibmsys1
 ```
 
-### kernel settings
+Edit the Linux kernel settings
 
 ZPDT requires some kernal setting to be correct. Edit ```/etc/sysctl.conf``` using nano or some other editor, with the following values.
 
@@ -101,7 +96,7 @@ Then activate the new kernel settings
 ```
 
 
-### bashrc
+Edit bashrc
 
 Next, edit the .bashrc file for the ibmsys1 user that owns ZPDT. set some path values.
 
@@ -118,7 +113,7 @@ ulimit -m unlimited (If more than 128 emulated I/O devices)
 ulimit -v unlimited (If more than 128 emulated I/O devices)
 ```
 
-### Finally you can test whether the system meets the pre-requisites for ZPDT.
+Finally you can test whether the system meets the pre-requisites for ZPDT.
 
 open a terminal as root, change directory to /usr/z1090/bin, and execute z1090instcheck
 
@@ -126,17 +121,10 @@ open a terminal as root, change directory to /usr/z1090/bin, and execute z1090in
 
 Oops - my system fails on one check, but it still works.
 
-
-## 3. Request a ZPDT License File
-
-this involves 4 steps
-1. generate a request file
-2. upload the request file to resourcelink
-3. download the granted license file
-4. install the granted license file
+### 1.1.4 Install the ZPDT Driver
 
 
-### Step 1. generate a request file
+### 1.1.5 Request the ZPDT License
 
 Logon to linux, switch to the /usr/z1090/bin directory, and execute the request_license command
 
@@ -144,9 +132,6 @@ Logon to linux, switch to the /usr/z1090/bin directory, and execute the request_
 [ibmsys1@RHEL ~]$ cd /usr/z1090/bin
 [ibmsys1@RHEL bin]$ sudo ./request_license
 ```
-
-### Step 2. upload the request file to resourcelink
-
 Using the firefox browser in your Linux PC, logon the [IBM resourcelink](https://www.ibm.com/support/resourcelink/) with your IBM id.
 
 Choose lease extension, fill in the details, and upload your request file
@@ -155,15 +140,11 @@ Choose lease extension, fill in the details, and upload your request file
 
 You must enter the serial number of your own ZPDT. the maximum date extension is 1 year.
 
-
-### Step 3. download the granted license file
+### 1.1.6 Install the ZPDT License
 
 The request process says to wait an hour, but it usually works immediately.
 
 Download the license file.
-
-
-### step 4. install the granted license file
 
 Open a terminal, switch to /usr/z1090/bin and execute the update license command.
 
