@@ -388,7 +388,22 @@ chmod 777 c3*
 The Resvols need to be unpacked using a special ZPDT program after the license key has been installed. 
 
 ```
-/usr/z1090/bin/Z1090_ADCD_install /home/ibmsys1/zpdteduk/c3res1.zPDT
+[ibmsys1@localhost zpdteduk]$ /usr/z1090/bin/Z1090_ADCD_install /home/ibmsys1/zpdteduk/c3res1.zPDT /home/ibmsys1/zpdteduk/c3res1
+
+Info: Z1090_ADCD_install: creating file /home/ibmsys1/zpdteduk/c3res1 for installation.
+
+Info: This procedure can take several minutes to complete.
+
+
+Info: Processing complete: File /home/ibmsys1/zpdteduk/c3res1 created.
+
+
+[ibmsys1@localhost zpdteduk]$ ls -al c3res*
+-rw-r--r--. 1 ibmsys1 zpdt 8539292672 Apr 15 19:39 c3res1
+-rwxrwxrwx. 1 ibmsys1 zpdt  918356776 Apr 15 19:34 c3res1.zPDT
+-rwxrwxrwx. 1 ibmsys1 zpdt 8539292672 Apr 15 19:23 c3res2
+[ibmsys1@localhost zpdteduk]$ 
+
 ```
 
 ## 1.3 Edit Device Map and IPL Script
@@ -481,7 +496,32 @@ device 406 osa osa
 
 ## 1.4 First IPL 
 
-Execute the following command ( or edit it into a script like go.sh )
+First, check whether the device map matches the files and their permissions, using the awsckmap command. I included a couple of deliberate errors to show the output.
+```
+[ibmsys1@localhost zpdteduk]$ awsckmap z31c_devmap 
+AWSCHK005I In file '/home/ibmsys1/zpdteduk/z31c_devmap' on line 54 ...
+AWSCHK082W Device file "/home/ibmsys1/zpdteduk/c3c560" does not exist, ERRNO=2
+AWSCHK005I In file '/home/ibmsys1/zpdteduk/z31c_devmap' on line 69 ...
+AWSCHK082W Device file "/home/ibmsys1/zpdteduk/sares1" does not exist, ERRNO=2
+AWSCHK200I Checking DEVMAP file 'z31c_devmap' ...
+AWSCHK204I Processed 82 records from DEVMAP /home/ibmsys1/zpdteduk/z31c_devmap
+AWSCHK206I ... and merged IOCDS file 
+AWSCHK208I Check complete, 0 errors, 2 warnings detected.
+[ibmsys1@localhost zpdteduk]$ 
+
+```
+
+I commented out the two erroneous lines, and got a clean check
+```
+[ibmsys1@localhost zpdteduk]$ awsckmap z31c_devmap 
+AWSCHK200I Checking DEVMAP file 'z31c_devmap' ...
+AWSCHK204I Processed 82 records from DEVMAP /home/ibmsys1/zpdteduk/z31c_devmap
+AWSCHK206I ... and merged IOCDS file 
+AWSCHK208I Check complete, 0 errors, 0 warnings detected.
+
+```
+
+Ready to IPL .... Execute the following command ( or edit it into a script like go.sh )
 
 ```
 awsstart --map z31c_devmap
@@ -492,9 +532,20 @@ Watch the Linux Desktop. Some messages will appear in the terminal where you ran
 
 ![IPLSEQ01](/sessions/images/iplseq01.JPG)
 
-On first IPL you will receive the message
+For this message ```IGGN505A SPECIFY UNIT FOR DFH620.CICS.SDFHLPA ON C3C620 OR CANCEL``` respond with ```R 00,CANCEL```
+
+For this message
+```IXC420D REPLY I TO INITIALIZE SYSPLEX ADCDPL, OR R TO REINITIALIZE XCF.
+ REPLYING I WILL IMPACT OTHER ACTIVE SYSTEMS.
+```
+
+respond with ```R 00,I```
+
+Now watch the z/OS console messages scroll over the screen. Every time you watch these messages you will become more aware of what the IPL sequence is doing.
 
 ![IPLSEQ02](/sessions/images/iplseq02.JPG)
+
+
 
 ## 1.5 Navigate ISPF/PDF Menus
 
