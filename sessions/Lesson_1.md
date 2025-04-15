@@ -379,6 +379,12 @@ gunzip -c /home/neale/Downloads/c3zwe1.gz > /home/ibmsys1/zpdteduk/c3zwe1
 
 ```
 
+Make sure that the volumes are all read/write
+
+```
+chmod 777 c3*
+```
+
 The Resvols need to be unpacked using a special ZPDT program after the license key has been installed. The process goes like this.
 
 ```
