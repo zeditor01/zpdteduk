@@ -63,8 +63,6 @@ Open a linux terminal and install these packages. (you may need to prefix the co
 # yum install x3270-x11 (Needed by x3270.)
 ```
 
-Create the ZPDT User (ibmsys1) and set a password
-
 Next - we need to create the ibmsys1 userid, which will be the owner of the ZPDT instance.
 It needs to be in a group, and you need to set a password. the commands below will do the trick
 
@@ -75,9 +73,7 @@ passwd ibmsys1
 usermod -aG wheel ibmsys1
 ```
 
-Edit the Linux kernel settings
-
-ZPDT requires some kernal setting to be correct. Edit ```/etc/sysctl.conf``` using nano or some other editor, with the following values.
+Edit the Linux kernel settings. ZPDT requires some kernal setting to be correct. Edit ```/etc/sysctl.conf``` using nano or some other editor, with the following values.
 
 Command: ```sudo nano /etc/sysctl.conf```
 
@@ -94,15 +90,13 @@ net.core.rmem_max=1048576
 net.core.rmem_default=1048576
 ```
 
-Then activate the new kernel settings
+Then activate the new kernel settings with the following command ( or reboot linux 0
 ```
 # /sbin/sysctl -p /etc/sysctl.conf
 ```
 
 
-Edit bashrc
-
-Next, edit the .bashrc file for the ibmsys1 user that owns ZPDT. set some path values.
+Edit bashrc to set some path values.
 
 Command: ```sudo nano /home/ibmsys1/.bashrc```
 
