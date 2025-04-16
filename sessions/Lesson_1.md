@@ -584,7 +584,15 @@ Now you can see the primary ISPF PDF menu.
 
 ## 1.6 Edit TCPIP stack in z/OS 
 
-To be added
+We will cover using the ISPF menus with demo and discussion. However, the first thing to do is to edit the TCPIP stack so that you can connect from your work laptop (with a decent 3270 emulator that you can share in Teams) to the z/OS image. So these instructions are aimed solely at editing TCPIP.
+
+
+![tcp001](/sessions/images/tcp001.png)
+
+![tcp002](/sessions/images/tcp002.png)
+
+![tcp003](/sessions/images/tcp003.png)
+
 
 ## 1.7 Test TCPIP connectivity 
 
