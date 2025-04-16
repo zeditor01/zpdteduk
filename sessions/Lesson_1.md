@@ -596,7 +596,14 @@ Take a look at ADCD.Z31C.PROCLIB(TCPIP), which is where the procedure for the TC
 
 Now, take a look inside ADCD.Z31C.TCPPARMS(PROF2) to check out the profile settings. We see find that the profile imbeds another member for the TCPIP connection definitions.
 
-![tcp003](/sessions/images/tcp003.png)
+![tcp004](/sessions/images/tcp004.png)
+
+We want to change this member, to comment out the zpdtdev1 imbed, and add the zpdtdev2 imbed. However, best practice is never to edit the provided configuration, but instead create new members in the USER.** libraries that are concatenated before the ADCD.** libraries and the SYS1.** libraries.
+
+So create USER.Z31C.TCPPARMS(PROF2) and copy the contents of ADCD.Z31C.TCPPARMS(PROF2) into it.
+
+![tcp005](/sessions/images/tcp005.png)
+
 
 
 ## 1.7 Test TCPIP connectivity 
