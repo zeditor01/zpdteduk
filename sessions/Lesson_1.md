@@ -567,11 +567,14 @@ Next, enter your userid (ibmuser)
 
 and enter your password. It will be set to ibmuser initially, and you will be forced to change it upon logon. I suggest changing it to "sys1". Write it down and remember it. It is case sensitive.
 
-![logon04](/sessions/images/logon04.png)
+![logon10](/sessions/images/logon10.png)
+
+
 
 Wait for  the ```READY ***``` messages, and then enter ISPF
 
-![logon10](/sessions/images/logon10.png)
+
+![logon04](/sessions/images/logon04.png)
 
 Now you can see the primary ISPF PDF menu.
 
