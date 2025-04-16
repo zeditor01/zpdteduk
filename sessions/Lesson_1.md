@@ -586,10 +586,15 @@ Now you can see the primary ISPF PDF menu.
 
 We will cover using the ISPF menus with demo and discussion. However, the first thing to do is to edit the TCPIP stack so that you can connect from your work laptop (with a decent 3270 emulator that you can share in Teams) to the z/OS image. So these instructions are aimed solely at editing TCPIP.
 
+Using TSO 3.4 find all the datasets with HLQ ADCD
 
 ![tcp001](/sessions/images/tcp001.png)
 
+Take a look at ADCD.Z31C.PROCLIB(TCPIP), which is where the procedure for the TCPIP stack is stored. Browse the TCPIP member to find out which TCPIP profile dataset is being used in the active TCPIP stack.
+
 ![tcp002](/sessions/images/tcp002.png)
+
+Now, take a look inside ADCD.Z31C.TCPPARMS(PROF2) to check out the profile settings. We see find that the profile imbeds another member for the TCPIP connection definitions.
 
 ![tcp003](/sessions/images/tcp003.png)
 
