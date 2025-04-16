@@ -604,7 +604,9 @@ So create USER.Z31C.TCPPARMS(PROF2) and copy the contents of ADCD.Z31C.TCPPARMS(
 
 ![tcp005](/sessions/images/tcp005.png)
 
+And Edit USER.Z31C.TCPPARMS(PROF2) to make the changes.
 
+![tcp006](/sessions/images/tcp006.png)
 
 ## 1.7 Test TCPIP connectivity 
 
