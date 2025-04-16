@@ -561,17 +561,19 @@ Eventually, the second x3270 emulator will present the VTAM logon screen. Enter 
 
 ![logon02](/sessions/images/logon02.png)
 
+Next, enter your userid (ibmuser)
 
 ![logon03](/sessions/images/logon03.png)
 
+and enter your password. It will be set to ibmuser initially, and you will be forced to change it upon logon. I suggest changing it to "sys1". Write it down and remember it. It is case sensitive.
 
 ![logon04](/sessions/images/logon04.png)
 
-
-
+Wait for  the ```READY ***``` messages, and then enter ISPF
 
 ![logon10](/sessions/images/logon10.png)
 
+Now you can see the primary ISPF PDF menu.
 
 ![logon11](/sessions/images/logon11.png)
 
