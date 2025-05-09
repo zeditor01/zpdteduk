@@ -584,6 +584,27 @@ Now you can see the primary ISPF PDF menu.
 
 ## 1.6 Edit TCPIP stack in z/OS 
 
+Before we edit the TCPIP stack, we must understand how to do it safely. If we just edited the TCPIP members in situ, and made mistakes, it might be difficult to revert back. 
+Best practice is to create new configuration datasets, and leave the old ones unchanged.
+This allows us to easily revert to the good configuration if we make mistakes.
+
+the diagram below summarises the approach. 
+
+* ADCD.Z31C.PROCLIB contains all the JCL procedures for all the started tasks.
+* USER.Z31C.PROBLIB contains override members, and is searched by z/OS first, before searching for procedures in ADCD.Z31C.PROCLIB
+* We leave ADCD.Z31C.PROCLIB(TCPIP) alone
+* We create a new member USER.Z31C.PROCLIB(TCPIP), which is copied from the old one, and edit this new member.
+* If our new member has a problem, we can always delete it, to revert back to the orginal.
+
+![overrides](/sessions/images/overrides.JPG)
+
+The new procedure USER.Z31C.PROCLIB(TCPIP) is edited to point to new members of the TCPIP configuration datasets.
+* PROF2 is the new profile
+* ZPDTDEV2 defines the network adapter configuration
+* ZPDTIPN2 defines the hostname
+* GBLTDATA defines the configuration members in use
+* GBLREsoL defines the resolver configuration.
+
 We will cover using the ISPF menus with demo and discussion. However, the first thing to do is to edit the TCPIP stack so that you can connect from your work laptop (with a decent 3270 emulator that you can share in Teams) to the z/OS image. So these instructions are aimed solely at editing TCPIP.
 
 Using TSO 3.4 find all the datasets with HLQ ADCD
