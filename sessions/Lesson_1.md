@@ -644,61 +644,12 @@ USER.Z31C.TCPPARMS(GBLRESOL) - host name resolver. comment out lines 8 and 19, p
 
 ![tcpcfg06](/sessions/images/tcpcfg06.JPG)
 
-XXXXXXXXXXXX
-
-![overrides](/sessions/images/overrides.JPG)
-
-
-Using TSO 3.4 find all the datasets with HLQ ADCD
-
-![tcp001](/sessions/images/tcp001.png)
-
-Take a look at ADCD.Z31C.PROCLIB(TCPIP), which is where the procedure for the TCPIP stack is stored. Browse the TCPIP member to find out which TCPIP profile dataset is being used in the active TCPIP stack.
-
-![tcp002](/sessions/images/tcp002.png)
-
-Now, take a look inside ADCD.Z31C.TCPPARMS(PROF2) to check out the profile settings. We see find that the profile imbeds another member for the TCPIP connection definitions.
-
-![tcp004](/sessions/images/tcp004.png)
-
-We want to change this member, to comment out the zpdtdev1 imbed (line 84), and add the zpdtdev2 imbed (line 91). However, best practice is never to edit the provided configuration, but instead create new members in the USER.** libraries that are concatenated before the ADCD.** libraries and the SYS1.** libraries.
-
-So create USER.Z31C.TCPPARMS(PROF2) and copy the contents of ADCD.Z31C.TCPPARMS(PROF2) into it. Do this by editing ADCD.Z31C.TCPPARMS(PROF2) and entering a "create USER.Z31C.TCPPARMS(PROF2)" command with a copy block for all the lines in the dataset member.
-
-![tcp005](/sessions/images/tcp005.png)
-
-And Edit USER.Z31C.TCPPARMS(PROF2) to make the changes. Comment line 84. Uncomment Line 91.
-
-![tcp006](/sessions/images/tcp006.png)
-
-Now, we need to copy the zpdtdev2 dataset member from ADCD.Z31C.TCPPARMS to USER.Z31C.TCPPARMS. Use the same copy technique as you did for PROF2. Now review the contents of USER.Z31C.TCPPARMS(ZPDTDEV2).
-
-![zpdtdev2a](/sessions/images/zpdtdev2a.JPG)
-
-A brief explanation of this dataset member is that
-* lines 30 to 35 represent one OSA card (the ZPDT tunnel adapter), that is current configured to be on iP address 10.1.1.2
-* lines 36 to 41 represent another OSA card (which is mapped to the ethernet card in the linux host), that is current configured to be on iP address 192.168.1.141
-* lines 46 to 52 define TCPIP routes over these two OSA cards.
-
-we're happy to keep the tunnel IP address as 10.1.1.2 but we want to assign a different address for the external ethernet connection that is consistent with the range of addresses that our home router supports.
-
-My home router is sitting at 192.168.1.1 , so I will choose an address which is not likely to conflict with any other devices on my home network. I tried pinging 192.168.1.181 and found it to be unused, so I edited line 41 to be 192.168.1.181 
-
-I also edited the routes section to say that the default route is the ethernet connection, and the specific address of the oruter is 192.168.1.1 
-
-![zpdtdev2c](/sessions/images/zpdtdev2c.JPG)
-
-Finally, copy ADCD.Z31C.TCPPARMS(ZPDTIPN2) to USER.Z31C.TCPPARMS(ZPDTIPN2)
-
-![zpdtipn2a](/sessions/images/zpdtipn2a.JPG)
-
-And edit the IP address of the hostname for this image
-
-![zpdtipn2b](/sessions/images/zpdtipn2b.JPG)
 
 ## 1.7 Test TCPIP connectivity 
 
-Easiest way to test TCPIP is to re-IPL z/OS. Follow the shutdown procedure in section 1.8 and then re-IPL
+Two ways to test TCPIP.
+1. shutdown z/OS and re-IPL
+2. Stop TCPIP and restart it.
 
 After re-IPL, and open a 3270 emulator from a different PC on your network at 192.168.1.181 on port 23.
 
