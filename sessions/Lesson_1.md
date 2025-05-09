@@ -609,22 +609,38 @@ We will cover using the ISPF menus with demo and discussion. However, the first 
 
 Once copies are made of these 5 dataset members, they should be edited as follows.
 
-
+USER.Z31C.PROCLIB(TCPIP) - just edit line 65 to reference the new Profile dataset USER.Z31C.TCPPARMS(PROF2)
 
 ![tcpcfg01](/sessions/images/tcpcfg01.JPG)
 
+USER.Z31C.TCPPARMS(PROF2) - comment out line 84 (referencing include file zpdtdev1) and uncomment line 91 referencing user.z31c.tcpparms(zpdtdev2) 
 
 ![tcpcfg02](/sessions/images/tcpcfg02.JPG)
 
+USER.Z31C.TCPPARMS(ZPDTDEV2) - edit the tcpip routing configuration
+
+A brief explanation of this dataset member is that
+* lines 30 to 35 represent one OSA card (the ZPDT tunnel adapter), that is current configured to be on iP address 10.1.1.2
+* lines 36 to 41 represent another OSA card (which is mapped to the ethernet card in the linux host), that is current configured to be on iP address 192.168.1.141
+* lines 46 to 52 define TCPIP routes over these two OSA cards.
+
+we're happy to keep the tunnel IP address as 10.1.1.2 but we want to assign a different address for the external ethernet connection that is consistent with the range of addresses that our home router supports.
+
+My home router is sitting at 192.168.1.1 , so I will choose an address which is not likely to conflict with any other devices on my home network. I tried pinging 192.168.1.181 and found it to be unused, so I edited line 41 to be 192.168.1.181 
+
+I also edited the routes section to say that the default route is the ethernet connection, and the specific address of the oruter is 192.168.1.1 
 
 ![tcpcfg03](/sessions/images/tcpcfg03.JPG)
 
+USER.Z31C.TCPPARMS(ZPDTIPN2) - just edit line 22, specifying the newly defined IP address to the hostname
 
 ![tcpcfg04](/sessions/images/tcpcfg04.JPG)
 
+USER.Z31C.TCPPARMS(GBLTDATA) - just edit line 144, to set google as our DNS server
 
 ![tcpcfg05](/sessions/images/tcpcfg05.JPG)
 
+USER.Z31C.TCPPARMS(GBLRESOL) - host name resolver. comment out lines 8 and 19, pointing to the old node member, and uncomment lines 13 and 24 pointing to USER.Z31C.TCPPARMS(ZPDTIPN2)
 
 ![tcpcfg06](/sessions/images/tcpcfg06.JPG)
 
