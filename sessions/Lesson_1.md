@@ -603,9 +603,35 @@ The new procedure USER.Z31C.PROCLIB(TCPIP) is edited to point to new members of 
 * ZPDTDEV2 defines the network adapter configuration
 * ZPDTIPN2 defines the hostname
 * GBLTDATA defines the configuration members in use
-* GBLREsoL defines the resolver configuration.
+* GBLRESOL defines the resolver configuration.
 
 We will cover using the ISPF menus with demo and discussion. However, the first thing to do is to edit the TCPIP stack so that you can connect from your work laptop (with a decent 3270 emulator that you can share in Teams) to the z/OS image. So these instructions are aimed solely at editing TCPIP.
+
+Once copies are made of these 5 dataset members, they should be edited as follows.
+
+
+
+![tcpcfg01](/sessions/images/tcpcfg01.JPG)
+
+
+![tcpcfg02](/sessions/images/tcpcfg02.JPG)
+
+
+![tcpcfg03](/sessions/images/tcpcfg03.JPG)
+
+
+![tcpcfg04](/sessions/images/tcpcfg04.JPG)
+
+
+![tcpcfg05](/sessions/images/tcpcfg05.JPG)
+
+
+![tcpcfg06](/sessions/images/tcpcfg06.JPG)
+
+XXXXXXXXXXXX
+
+![overrides](/sessions/images/overrides.JPG)
+
 
 Using TSO 3.4 find all the datasets with HLQ ADCD
 
