@@ -623,7 +623,7 @@ My home router is sitting at 192.168.1.1 , so I will choose an address which is 
 
 I also edited the routes section to say that the default route is the ethernet connection, and the specific address of the oruter is 192.168.1.1 
 
-![zpdtdev2b](/sessions/images/zpdtdev2b.JPG)
+![zpdtdev2c](/sessions/images/zpdtdev2c.JPG)
 
 Finally, copy ADCD.Z31C.TCPPARMS(ZPDTIPN2) to USER.Z31C.TCPPARMS(ZPDTIPN2)
 
