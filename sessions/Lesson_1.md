@@ -598,19 +598,24 @@ Now, take a look inside ADCD.Z31C.TCPPARMS(PROF2) to check out the profile setti
 
 ![tcp004](/sessions/images/tcp004.png)
 
-We want to change this member, to comment out the zpdtdev1 imbed, and add the zpdtdev2 imbed. However, best practice is never to edit the provided configuration, but instead create new members in the USER.** libraries that are concatenated before the ADCD.** libraries and the SYS1.** libraries.
+We want to change this member, to comment out the zpdtdev1 imbed (line 84), and add the zpdtdev2 imbed (line 91). However, best practice is never to edit the provided configuration, but instead create new members in the USER.** libraries that are concatenated before the ADCD.** libraries and the SYS1.** libraries.
 
-So create USER.Z31C.TCPPARMS(PROF2) and copy the contents of ADCD.Z31C.TCPPARMS(PROF2) into it.
+So create USER.Z31C.TCPPARMS(PROF2) and copy the contents of ADCD.Z31C.TCPPARMS(PROF2) into it. Do this by editing ADCD.Z31C.TCPPARMS(PROF2) and entering a "create USER.Z31C.TCPPARMS(PROF2)" command with a copy block for all the lines in the dataset member.
 
 ![tcp005](/sessions/images/tcp005.png)
 
-And Edit USER.Z31C.TCPPARMS(PROF2) to make the changes.
+And Edit USER.Z31C.TCPPARMS(PROF2) to make the changes. Comment line 84. Uncomment Line 91.
 
 ![tcp006](/sessions/images/tcp006.png)
 
-Now edit 
+Now, we need to copy the zpdtdev2 dataset member from ADCD.Z31C.TCPPARMS to USER.Z31C.TCPPARMS. Use the same copy technique as you did for PROF2. Now review the contents of USER.Z31C.TCPPARMS(ZPDTDEV2).
 
 ![zpdtdev2a](/sessions/images/zpdtdev2a.JPG)
+
+A brief explanation of this dataset member is that
+* lines 30 to 35 represent one OSA card (the ZPDT tunnel adapter), that is current configured to be on iP address 10.1.1.2
+* lines 36 to 41 represent another OSA card (which is mapped to the ethernet card in the linux host), that is current configured to be on iP address 192.168.1.141
+* lines 46 to 52 define TCPIP routes over these two OSA cards.
 
 ## 1.7 Test TCPIP connectivity 
 
