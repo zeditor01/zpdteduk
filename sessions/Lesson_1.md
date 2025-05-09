@@ -608,6 +608,10 @@ And Edit USER.Z31C.TCPPARMS(PROF2) to make the changes.
 
 ![tcp006](/sessions/images/tcp006.png)
 
+Now edit 
+
+![zpdtdev2a](/sessions/images/zpdtdev2a.JPG)
+
 ## 1.7 Test TCPIP connectivity 
 
 To be added
