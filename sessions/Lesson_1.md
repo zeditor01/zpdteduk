@@ -625,15 +625,28 @@ I also edited the routes section to say that the default route is the ethernet c
 
 ![zpdtdev2b](/sessions/images/zpdtdev2b.JPG)
 
+Finally, copy ADCD.Z31C.TCPPARMS(ZPDTIPN2) to USER.Z31C.TCPPARMS(ZPDTIPN2)
 
+![zpdtipn2a](/sessions/images/zpdtipn2a.JPG)
+
+And edit the IP address of the hostname for this image
+
+![zpdtipn2b](/sessions/images/zpdtipn2b.JPG)
 
 ## 1.7 Test TCPIP connectivity 
 
-To be added
+Easiest way to test TCPIP is to re-IPL z/OS. Follow the shutdown procedure in section 1.8 and then re-IPL
+
+After re-IPL, and open a 3270 emulator from a different PC on your network at 192.168.1.181 on port 23.
+
 
 ## 1.8 Shutdown z/OS 
 
-To be added
+Easiest way to test TCPIP is to re-IPL z/OS.
+
+* from the z/OS console, enter "s shutdown" to invoke the shutdown procedure
+* when you get the message the OMVS has shutdown, enter the command "$PJES2"
+* finally, from the linux command line, enter awsstop
 
 ## Homework:
 Practice IPL, TSO logon, TCPIP connectivity and Shutdown of z/OS 
