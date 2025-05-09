@@ -617,6 +617,16 @@ A brief explanation of this dataset member is that
 * lines 36 to 41 represent another OSA card (which is mapped to the ethernet card in the linux host), that is current configured to be on iP address 192.168.1.141
 * lines 46 to 52 define TCPIP routes over these two OSA cards.
 
+we're happy to keep the tunnel IP address as 10.1.1.2 but we want to assign a different address for the external ethernet connection that is consistent with the range of addresses that our home router supports.
+
+My home router is sitting at 192.168.1.1 , so I will choose an address which is not likely to conflict with any other devices on my home network. I tried pinging 192.168.1.181 and found it to be unused, so I edited line 41 to be 192.168.1.181 
+
+I also edited the routes section to say that the default route is the ethernet connection, and the specific address of the oruter is 192.168.1.1 
+
+![zpdtdev2b](/sessions/images/zpdtdev2b.JPG)
+
+
+
 ## 1.7 Test TCPIP connectivity 
 
 To be added
